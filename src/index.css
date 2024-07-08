@@ -1,0 +1,89 @@
+:root {
+  --primary-color: #10162f;
+  --secondary-color: #2e2e2e;
+
+  --background-gradient: radial-gradient(
+    ellipse at top left,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+
+  --text-color-white: white;
+  --text-color--yellow: #facc00;
+  --text-color--black: black;
+
+  --block-bg-color: #facc00;
+  --block-bg-hover-color: #be9c00;
+  --block-shadow-color: rgba(0, 0, 0, 0.2);
+
+  --room-bg-color: #f9f9f9;
+  --room-header-bg-color: #6c63ff;
+  --room-header-text-color: #ffffff;
+  --room-header-avatar-size: 3rem;
+  --participants-icon-size: 2rem;
+  --participants-text-color: #333;
+  --participants-font-size: 1.2em;
+
+  --editor-padding: 1rem;
+  --editor-border-radius: 8px;
+  --editor-border: 1px solid #ccc;
+  --editor-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Assistant", "sans-serif",
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-size: 16px;
+  --line-height: 24px;
+  --font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  background: var(--background-gradient);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.75em;
+  color: var(--text-color-white);
+  text-align: center;
+  text-shadow: 2px 3px 50px #bf00ff;
+  letter-spacing: 0.1em;
+}
+
+h1::after {
+  animation: blinker 1s step-end infinite;
+  color: var(--text-color--yellow);
+  content: "_";
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

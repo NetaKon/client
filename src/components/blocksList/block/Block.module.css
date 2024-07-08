@@ -1,0 +1,30 @@
+.block {
+  margin: 1.5rem 1rem;
+  padding: 1.5rem;
+  background-color: var(--block-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--block-shadow-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-color--black);
+  border: none;
+  cursor: pointer;
+  animation: animate-in 1s ease-out forwards;
+}
+
+.block:hover {
+  background-color: var(--block-bg-hover-color);
+  transform: scale(1.05);
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,14 @@
+.blocks {
+  list-style: none;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: center;
+}
+
+.blocks a {
+  text-decoration: none;
+}
